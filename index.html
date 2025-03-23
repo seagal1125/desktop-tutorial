@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button - 短篇懸疑漫畫</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #111;
+            color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .cover {
+            background: linear-gradient(to bottom, #000000 0%, #222222 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+        .cover h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+            color: #e74c3c;
+        }
+        .cover p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+            background-color: #222;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+        p.story {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 2em;
+            white-space: pre-wrap;
+        }
+        .comic-container {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+        .comic {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 2em;
+            padding-bottom: 40px;
+        }
+        .button-area {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #888;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .cover h1 {
+                font-size: 2em;
+            }
+            .cover p {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p.story {
+                font-size: 1em;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <h1>BUTTON</h1>
+        <p>一個按鈕，100萬美元，與一個陌生人的命運。</p>
+    </div>
+    <div class="container">
+        <h2>故事簡介</h2>
+        <div class="button-area">
+            <button onclick="toggleStory()">切換故事顯示</button>
+        </div>
+        <p class="story" id="story">
+某天，一對夫妻收到一個神秘的木盒，盒中有一顆紅色的按鈕，旁邊附上一張卡片：
+「按下按鈕，你將獲得一百萬美元，但某個你不認識的人會因此死亡。」
+
+亞瑟反對這樣的誘惑，但諾瑪卻無法抗拒。終於，在孤獨與貪念交錯之下，她按下了那顆按鈕。
+
+一位神祕男子史都華如約出現，遞給她一張支票，沒有責備，沒有說明。
+
+臨走前，他平靜地說了一句話：「我會把盒子交給下一位你不認識的人。」
+
+那一刻，諾瑪才真正明白：她不是第一個，也不會是最後一個。
+她得到了錢，也種下了恐懼。
+        </p>
+        <div class="comic-container">
+            <img src="four_panel_button_comic_tc_fixed.png" alt="Button 四格漫畫" class="comic">
+        </div>
+        <footer>© 改編自 Richard Matheson 短篇小說《Button, Button》 | 圖像與排版由 AI 生成</footer>
+    </div>
+    <script>
+        function toggleStory() {
+            var story = document.getElementById('story');
+            story.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
