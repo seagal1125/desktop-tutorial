@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button - 短篇懸疑漫畫</title>
+    <title>Button - 短篇懸疑漫畫（詛咒版本）</title>
     <style>
         body {
             font-family: "Noto Sans TC", sans-serif;
@@ -23,16 +23,19 @@
             font-size: 3em;
             margin-bottom: 0.2em;
             color: #e74c3c;
+            animation: fadeIn 1.2s ease-out;
         }
         .cover p {
             font-size: 1.2em;
             color: #ccc;
+            animation: fadeIn 2s ease-out;
         }
         .container {
             max-width: 900px;
             margin: auto;
             padding: 40px 20px;
             background-color: #222;
+            animation: fadeIn 2s ease-in;
         }
         h2 {
             text-align: center;
@@ -44,6 +47,7 @@
             line-height: 1.8;
             margin-bottom: 2em;
             white-space: pre-wrap;
+            animation: textFade 3s ease-in-out;
         }
         .comic-container {
             position: relative;
@@ -54,6 +58,7 @@
             width: 100%;
             height: auto;
             display: block;
+            animation: fadeInComic 2s ease-in;
         }
         footer {
             text-align: center;
@@ -81,6 +86,22 @@
         .hidden {
             display: none;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textFade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInComic {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
         @media (max-width: 600px) {
             .cover h1 {
                 font-size: 2em;
@@ -121,7 +142,7 @@
 臨走前，他平靜地說了一句話：「我會把盒子交給下一位你不認識的人。」
 
 那一刻，諾瑪才真正明白：她不是第一個，也不會是最後一個。
-她得到了錢，也種下了恐懼。
+她得到了錢，良知也絞成獻祭的詛咒，悄然延續至下一位受試者。
         </p>
         <div class="comic-container">
             <img src="four_panel_button_comic_tc_fixed.png" alt="Button 四格漫畫" class="comic">
